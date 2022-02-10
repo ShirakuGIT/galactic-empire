@@ -56,16 +56,25 @@ def binsearch(listx, target, high, low=0):
 
 list1 = sorted(list1)
 
+
+# Linear search using recursion
+# First try baby!
+
+def linsearch(listx, target, high, counter=0):
+
+
+	if listx[counter] == target:
+		return counter
+
+	else:
+		try:
+			return linsearch(listx, target, high, counter+1)
+		except:
+			return "Please enter numbers within range"
+
+
 print(list1)
-
-print(binsearch(list1, 18, len(list1)-1))
-
-
-
-
-
-
-
+print(linsearch(list1, 34, len(list1)-1))
 
 
 
